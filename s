@@ -3,7 +3,7 @@
 ]]
 
 -- main module
-getgenv().espLibrary = {
+local espLibrary = {
     instances = {},
     espCache = {},
     chamsCache = {},
@@ -31,8 +31,8 @@ getgenv().espLibrary = {
         teamColor = false,
         fillColor = nil,
         whitelistColor = Color3.new(1, 0, 0),
-        outOfViewArrows = true,
-        outOfViewArrowsFilled = true,
+        outOfViewArrows = false,
+        outOfViewArrowsFilled = false,
         outOfViewArrowsSize = 25,
         outOfViewArrowsRadius = 100,
         outOfViewArrowsColor = Color3.new(1, 1, 1),
@@ -73,7 +73,7 @@ getgenv().espLibrary = {
         chamsOutlineTransparency = 0
     },
 };
-
+espLibrary.__index = espLibrary;
 
 -- variables
 local getService = game.GetService;
